@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agendamento - Bella Style</title>
+  <link rel="stylesheet" href="style/agend.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="logo">
+      <h1>Elegance <span> Beauty </span></h1>
+      <p>Agende seu horário</p>
+    </div>
+
+    <form id="form-agendamento">
+
+      <div>
+        <label for="nome">Seu nome</label>
+        <input type="text" id="nome" placeholder="Digite seu nome" required>
+      </div>
+
+      <div>
+        <label for="data">Escolha a data <small>(seg a sex)</small></label>
+        <input type="date" id="data" required>
+      </div>
+
+      <div>
+        <label for="servico">Selecione o serviço</label>
+        <select id="servico" required>
+          <option value="">Escolha um serviço</option>
+          <option value="Corte Feminino">Corte Feminino</option>
+          <option value="Corte Masculino">Corte Masculino</option>
+          <option value="Escova">Escova</option>
+          <option value="Progressiva">Progressiva</option>
+          <option value="Hidratação">Hidratação</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="horarios">Horários disponíveis</label>
+        <select id="horarios" required>
+          <option value="">Escolha uma data primeiro</option>
+        </select>
+      </div>
+
+      <!-- Feedback de sucesso / erro / aviso -->
+      <div id="feedback" class="feedback" style="display:none;"></div>
+
+      <button type="submit">Agendar</button>
+
+    </form>
+
+  </div>
+
+  <!-- Firebase via ESM — main.js usa type="module" -->
+  <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
